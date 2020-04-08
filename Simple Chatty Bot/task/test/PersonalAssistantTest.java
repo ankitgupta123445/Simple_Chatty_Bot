@@ -7,8 +7,8 @@ import java.util.List;
 
 
 class Clue {
-    int age;
-    String name;
+        int age;
+        String name;
         int count;
 
         Clue(String name, int age, int count) {
@@ -58,19 +58,19 @@ public class PersonalAssistantTest extends BaseStageTest<Clue> {
             }
 
             String lineWithName = lines[3].toLowerCase();
-        String name = clue.name.toLowerCase();
+            String name = clue.name.toLowerCase();
 
-        if (!lineWithName.contains(name)) {
-            return CheckResult.FALSE(
-                    "The name was " + clue.name + "\n" +
-                            "But the 4-th line was:\n" +
-                            "\"" + lines[3] + "\"\n\n" +
-                            "4-th line should contain a name of the user"
-            );
-        }
+            if (!lineWithName.contains(name)) {
+                    return CheckResult.FALSE(
+                            "The name was " + clue.name + "\n" +
+                                    "But the 4-th line was:\n" +
+                                    "\"" + lines[3] + "\"\n\n" +
+                                    "4-th line should contain a name of the user"
+                    );
+            }
 
-        String lineWithAge = lines[6].toLowerCase();
-        String age = Integer.toString(clue.age);
+            String lineWithAge = lines[6].toLowerCase();
+            String age = Integer.toString(clue.age);
 
             if (!lineWithAge.contains(age)) {
                     return CheckResult.FALSE(
